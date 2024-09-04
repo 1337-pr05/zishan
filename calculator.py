@@ -1,4 +1,9 @@
-a=input('enter the expression')
+def main(): #added by contributor
+    b=input('enter the expression') #added by contributor
+    return b    #added by contributor
+
+a = main()
+
 original_lst=list()
 original_lst_1=list()
 original_lst_2=list()
@@ -20,6 +25,9 @@ for i in original_lst:
         div_index_copy=div_index
         numerator=float(original_lst[div_index-1])
         denominator=float (original_lst[div_index+1])
+        if denominator == 0: #added by contributor
+            print("Cannot Divide by zero")  #added by contributor
+            main() #added by contributor
         div_result=numerator/denominator
         del original_lst[div_index-1:div_index+2]
         original_lst.insert(div_index_copy-1,div_result)
